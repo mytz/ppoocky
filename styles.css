@@ -23,5 +23,5 @@ body {
     top: 0;
     right: 0;
     height: 100%; /* Ajusta la altura al 100% del fondo */
+    z-index: 1; /* Asegura que la serpiente esté sobre el fondo */
 }
-
