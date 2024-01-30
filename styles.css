@@ -18,6 +18,21 @@ body {
     z-index: 1;
 }
 
+.snake-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 1080px; /* Ancho de la imagen SNAKE.png */
+    height: 100%;
+    z-index: 2;
+}
+
+.snake {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Para asegurarse de que la imagen cubra el contenedor sin cambiar su relación de aspecto */
+}
+
 @keyframes vaporAnim {
     0% {
         transform: translateX(0);
@@ -26,4 +41,3 @@ body {
         transform: translateX(100%);
     }
 }
-
