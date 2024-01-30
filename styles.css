@@ -4,17 +4,16 @@ body {
 }
 
 .container {
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 1920px; /* Tamaño fijo del contenedor */
     height: 1080px;
     overflow: hidden;
 }
 
 .background, .foreground {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%; /* Ambas imágenes ocuparán el 100% del ancho del contenedor */
-    height: 100%; /* Ambas imágenes ocuparán el 100% del alto del contenedor */
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
