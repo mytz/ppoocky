@@ -57,6 +57,7 @@ body {
     height: 100%;
     object-fit: contain;
     z-index: 1;
+    pointer-events: none; /* Esto permite que los eventos del ratón pasen a través de OLDSNAKE */
     user-select: none;
     -webkit-user-drag: none;
 }
