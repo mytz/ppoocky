@@ -1,16 +1,15 @@
 body {
     margin: 0;
     padding: 0;
-    overflow: hidden; /* Evita la barra de desplazamiento al hacer zoom */
 }
 
 .background {
     position: fixed;
     top: 0;
     left: 0;
-    width: 1920px;
-    height: 1080px;
-    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .background img {
