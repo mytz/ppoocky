@@ -25,11 +25,14 @@ body {
 }
 
 .logo {
+    width: 50vw; /* Ajusta el ancho según tu preferencia */
+    height: 50vh; /* Ajusta el alto según tu preferencia */
+    max-width: 90% /* Mantén el 90% de su tamaño original */;
+    max-height: 90%;
+    object-fit: contain;
     position: absolute;
-    top: 50px; /* Ajusta la posición vertical según tu preferencia */
-    left: 50px; /* Ajusta la posición horizontal según tu preferencia */
-    max-width: 100%;
-    max-height: 100%;
+    top: 0;
+    left: 0;
     z-index: 0;
 }
 
