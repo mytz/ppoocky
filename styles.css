@@ -15,13 +15,13 @@ body {
 .background img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    /* object-fit: cover; */ /* Eliminamos esta propiedad para que el fondo no se ajuste al contenedor */
 }
 
 .snake {
     position: fixed;
     top: 0;
     right: 0;
-    height: 100%; /* Ajusta la altura al 100% del fondo */
-    z-index: 1; /* Asegura que la serpiente esté sobre el fondo */
+    height: 100%;
+    z-index: 1;
 }
