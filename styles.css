@@ -59,10 +59,10 @@ body {
 
 .chucky-container {
     position: absolute;
-    top: 15vh; /* Ajusta la posición verticalmente según tu preferencia */
-    left: -23vw; /* Ajusta la posición horizontalmente según tu preferencia */
-    width: 100vw; /* Ajusta el ancho según tu preferencia */
-    height: 100vh; /* Ajusta el alto según tu preferencia */
+    top: 23vh; /* Ajusta la posición verticalmente según tu preferencia */
+    left: -15vw; /* Ajusta la posición horizontalmente según tu preferencia */
+    width: 83vw; /* Ajusta el ancho según tu preferencia */
+    height: 83vh; /* Ajusta el alto según tu preferencia */
     z-index: -1;
 }
 
