@@ -3,40 +3,33 @@ body {
     padding: 0;
     width: 1920px;
     height: 1080px;
-    background-image: url('https://i.ibb.co/RhXxzJQ/FONDO.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
+    overflow: hidden; /* Evita la barra de desplazamiento al hacer zoom */
 }
 
-.vapor {
-    position: absolute;
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.2);
-    animation: vaporAnim 10s linear infinite;
     z-index: 1;
+}
+
+.background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .snake-container {
     position: fixed;
     top: 0;
     right: 0;
-    height: 100%;
+    height: 1080px; /* Alto de la imagen SNAKE.png */
     z-index: 2;
 }
 
 .snake {
-    width: 100%;
     height: 100%;
     object-fit: cover; /* Para asegurarse de que la imagen cubra el contenedor sin cambiar su relación de aspecto */
-}
-
-@keyframes vaporAnim {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(100%);
-    }
 }
