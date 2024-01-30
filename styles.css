@@ -25,7 +25,7 @@ body {
 }
 
 .logo {
-    width: 50vw; /* Ajusta el ancho según tu preferencia */
+    width: 55vw; /* Ajusta el ancho según tu preferencia */
     height: 50vh; /* Ajusta el alto según tu preferencia */
     max-width: 100% /* Mantén el % de su tamaño original */;
     max-height: 100%;
