@@ -1,7 +1,6 @@
 body {
     margin: 0;
     padding: 0;
-    overflow: hidden; /* Para evitar barras de desplazamiento al hacer zoom */
 }
 
 .background {
@@ -19,10 +18,10 @@ body {
     object-fit: cover;
 }
 
-.snake-image {
+.snake {
     position: fixed;
-    top: 0; /* Ajusta según tu preferencia */
-    right: 0; /* Ajusta según tu preferencia */
-    width: 30vw; /* Ajusta según tu preferencia, utiliza vw para relación con el ancho de la ventana */
-    height: 30vh; /* Ajusta según tu preferencia, utiliza vh para relación con el alto de la ventana */
+    top: 0;
+    right: 0;
+    height: 100%; /* Ajusta la altura al 100% del fondo */
 }
+
