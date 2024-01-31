@@ -65,6 +65,19 @@
 
 <!-- AQUÍ ESTARÁ el reproductor de música -->
 
+{block:ifmusicplayer}
+<div id="music-player">
+    <div class="playerbutton"><i class="fa-solid fa-play"></i></div>
+
+    <!-- SONG NAME HERE -->
+    {text:music name}
+
+    <!-- HOW TO CHANGE THE MUSIC -->
+    <audio src="poockymusic.wav" volume="-15"></audio>
+</div>
+{/block:ifmusicplayer}
+
+
 
 <!-- Listo -->
 
