@@ -121,6 +121,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     musicPlayerButton.addEventListener('click', function() {
         if (audio.paused) {
+            audio.src = 'icecube.mp3'; // Cambia la fuente del audio
             audio.play();
         } else {
             audio.pause();
