@@ -179,7 +179,7 @@ body {
 
 .myt-container {
     position: absolute;
-    top: 63vh; /* Ajusta la posición vertical según tus preferencias */
+    top: 64vh; /* Ajusta la posición vertical según tus preferencias */
     left: 3vw; /* Ajusta la posición horizontal según tus preferencias */
     width: 5vw; /* Ajusta el ancho según tus preferencias */
     height: 20vh; /* Esto hará que el tamaño se ajuste proporcionalmente */
