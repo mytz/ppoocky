@@ -136,12 +136,12 @@ body {
 }
 .amigos-container {
     position: absolute;
-    top: 50vh; /* Ajusta la posición vertical según tus preferencias */
-    left: 4vw; /* Ajusta la posición horizontal según tus preferencias */
-    width: 15vw; /* Ajusta el ancho según tus preferencias */
-    height: 30vh; /* Esto hará que el tamaño se ajuste proporcionalmente */
+    top: 50vh; 
+    left: 4vw; 
+    width: 15vw; 
+    height: 30vh; 
     pointer-events: none; /* Para que no afecte a los eventos del mouse */
-    z-index: -2; /* Ajusta el índice Z según sea necesario */
+    z-index: -2; 
 }
 
 .amigos {
@@ -151,10 +151,10 @@ body {
 }
 .dehmi-container {
     position: absolute;
-    top: 54vh; /* Ajusta la posición vertical según tus preferencias */
-    left: 2.5vw; /* Ajusta la posición horizontal según tus preferencias */
-    width: 6vw; /* Ajusta el ancho según tus preferencias */
-    height: auto; /* Esto hará que el tamaño se ajuste proporcionalmente */
+    top: 54vh; 
+    left: 2.5vw; 
+    width: 6vw; 
+    height: auto; 
 }
 
 .dehmi {
@@ -165,10 +165,10 @@ body {
 
 .sinbi-container {
     position: absolute;
-    top: 60vh; /* Ajusta la posición vertical según tus preferencias */
-    left: 2.5vw; /* Ajusta la posición horizontal según tus preferencias */
-    width: 6vw; /* Ajusta el ancho según tus preferencias */
-    height: auto; /* Esto hará que el tamaño se ajuste proporcionalmente */
+    top: 60vh; 
+    left: 2.5vw; 
+    width: 6vw; 
+    height: auto; 
 }
 
 .sinbi {
@@ -179,10 +179,10 @@ body {
 
 .myt-container {
     position: absolute;
-    top: 66vh; /* Ajusta la posición vertical según tus preferencias */
-    left: 2.5vw; /* Ajusta la posición horizontal según tus preferencias */
-    width: 6vw; /* Ajusta el ancho según tus preferencias */
-    height: auto; /* Esto hará que el tamaño se ajuste proporcionalmente */
+    top: 66vh; 
+    left: 2.5vw; 
+    width: 6vw; 
+    height: auto; 
 }
 
 .myt {
@@ -206,28 +206,5 @@ body {
 }
 
 
-/* el reproductor */
+/* el reproductor PROXIMAMENTE*/
 
-.reproductor {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    background-color: rgba(0, 0, 0, 0.4);
-    border-radius: 20px;
-    width: 70vw;
-    height: 20vh;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
-}
-
-.reproductor i {
-    color: white;
-    font-size: 5vw; /* Tamaño fijo para todos los íconos */
-    cursor: pointer;
-}
-
-#volumeDown, #volumeUp {
-    font-size: 4vw; /* 5% más pequeño que los otros */
-}
