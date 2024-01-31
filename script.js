@@ -49,3 +49,71 @@ function parpadeoRapido() {
 
 // Iniciar el parpadeo rápido
 parpadeoRapido();
+///////////////////////////////////////BOTONES
+
+// Obtener la referencia a la imagen DEHMI
+const dehmiImage = document.querySelector('.dehmi');
+
+// Guardar la ruta de la imagen DEHMI en hover
+const hoverDehmiSrc = 'https://i.ibb.co/Rhgv0fg/DEHMI2.png';
+
+// Crear un objeto de audio para el sonido de hover
+const hoverSound = new Audio('hover.wav');
+
+// Añadir un evento de hover a la imagen DEHMI
+dehmiImage.addEventListener('mouseover', function () {
+    // Cambiar la fuente de la imagen a la versión en hover
+    dehmiImage.src = hoverDehmiSrc;
+
+    // Reproducir el sonido de hover
+    hoverSound.play();
+});
+
+// Añadir un evento cuando se retira el mouse de la imagen DEHMI
+dehmiImage.addEventListener('mouseout', function () {
+    // Volver a la fuente original de la imagen
+    dehmiImage.src = 'https://i.ibb.co/ZHFhTQs/DEHMI1.png';
+});
+
+// Repetir el mismo proceso para SINBI y MYT
+// Obtener la referencia a la imagen SINBI
+const sinbiImage = document.querySelector('.sinbi');
+
+// Guardar la ruta de la imagen SINBI en hover
+const hoverSinbiSrc = 'https://i.ibb.co/X7MgtMJ/SINBI2.png';
+
+// Añadir un evento de hover a la imagen SINBI
+sinbiImage.addEventListener('mouseover', function () {
+    // Cambiar la fuente de la imagen a la versión en hover
+    sinbiImage.src = hoverSinbiSrc;
+
+    // Reproducir el sonido de hover
+    hoverSound.play();
+});
+
+// Añadir un evento cuando se retira el mouse de la imagen SINBI
+sinbiImage.addEventListener('mouseout', function () {
+    // Volver a la fuente original de la imagen
+    sinbiImage.src = 'https://i.ibb.co/qpYK2bd/SINBI1.png';
+});
+
+// Obtener la referencia a la imagen MYT
+const mytImage = document.querySelector('.myt');
+
+// Guardar la ruta de la imagen MYT en hover
+const hoverMytSrc = 'https://i.ibb.co/DwFqq4d/MYT2.png';
+
+// Añadir un evento de hover a la imagen MYT
+mytImage.addEventListener('mouseover', function () {
+    // Cambiar la fuente de la imagen a la versión en hover
+    mytImage.src = hoverMytSrc;
+
+    // Reproducir el sonido de hover
+    hoverSound.play();
+});
+
+// Añadir un evento cuando se retira el mouse de la imagen MYT
+mytImage.addEventListener('mouseout', function () {
+    // Volver a la fuente original de la imagen
+    mytImage.src = 'https://i.ibb.co/mtFXDqX/MYT1-copia.png';
+});
