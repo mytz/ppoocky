@@ -115,18 +115,22 @@ mytImage.addEventListener('mouseleave', function () {
 /////////////////////////////////////////////////////////////////// REPRODUCTOR
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Manejar la reproducción/pausa al hacer clic en el botón
     var musicPlayerButton = document.querySelector('#music-player .playerbutton');
+    var pauseButton = document.querySelector('#music-player .pausebutton');
     var audio = document.querySelector('#music-player audio');
 
     musicPlayerButton.addEventListener('click', function() {
         if (audio.paused) {
-            audio.src = 'icecube.mp3'; // Cambia la fuente del audio
-            audio.volume = Math.max(0, audio.volume - 0.301); // Reducir el volumen en 30db
+            audio.src = 'icecube.mp3';
+            audio.volume = Math.max(0, audio.volume - 0.301);
             audio.play();
         } else {
             audio.pause();
         }
+    });
+
+    pauseButton.addEventListener('click', function() {
+        audio.pause();
     });
 });
 
