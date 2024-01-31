@@ -139,5 +139,3 @@ function cambiarCancion() {
     reproductor.src = canciones[cancionActual];
     reproductor.play();
 }
-
-// También puedes añadir lógica para controlar el evento de finalización de la canción, si es necesario.
