@@ -141,7 +141,7 @@ body {
     width: 15vw; /* Ajusta el ancho según tus preferencias */
     height: 30vh; /* Esto hará que el tamaño se ajuste proporcionalmente */
     pointer-events: none; /* Para que no afecte a los eventos del mouse */
-    z-index: 7; /* Ajusta el índice Z según sea necesario */
+    z-index: -2; /* Ajusta el índice Z según sea necesario */
 }
 
 .amigos {
@@ -151,42 +151,42 @@ body {
 }
 .dehmi-container {
     position: absolute;
-    top: 52vh; /* Ajusta la posición vertical según tus preferencias */
-    left: 3vw; /* Ajusta la posición horizontal según tus preferencias */
-    width: 5vw; /* Ajusta el ancho según tus preferencias */
-    height: 20vh; /* Esto hará que el tamaño se ajuste proporcionalmente */
+    top: 54vh; /* Ajusta la posición vertical según tus preferencias */
+    left: 2.5vw; /* Ajusta la posición horizontal según tus preferencias */
+    width: 6vw; /* Ajusta el ancho según tus preferencias */
+    height: auto; /* Esto hará que el tamaño se ajuste proporcionalmente */
 }
 
 .dehmi {
     width: 100%;
-    height: 40%;
+    height: 100%;
     object-fit: contain;
 }
 
 .sinbi-container {
     position: absolute;
-    top: 57vh; /* Ajusta la posición vertical según tus preferencias */
-    left: 3vw; /* Ajusta la posición horizontal según tus preferencias */
-    width: 5vw; /* Ajusta el ancho según tus preferencias */
-    height: 20vh; /* Esto hará que el tamaño se ajuste proporcionalmente */
+    top: 60vh; /* Ajusta la posición vertical según tus preferencias */
+    left: 2.5vw; /* Ajusta la posición horizontal según tus preferencias */
+    width: 6vw; /* Ajusta el ancho según tus preferencias */
+    height: auto; /* Esto hará que el tamaño se ajuste proporcionalmente */
 }
 
 .sinbi {
     width: 100%;
-    height: 40%;
+    height: 100%;
     object-fit: contain;
 }
 
 .myt-container {
     position: absolute;
-    top: 62vh; /* Ajusta la posición vertical según tus preferencias */
-    left: 3vw; /* Ajusta la posición horizontal según tus preferencias */
-    width: 5vw; /* Ajusta el ancho según tus preferencias */
-    height: 20vh; /* Esto hará que el tamaño se ajuste proporcionalmente */
+    top: 66vh; /* Ajusta la posición vertical según tus preferencias */
+    left: 2.5vw; /* Ajusta la posición horizontal según tus preferencias */
+    width: 6vw; /* Ajusta el ancho según tus preferencias */
+    height: auto; /* Esto hará que el tamaño se ajuste proporcionalmente */
 }
 
 .myt {
     width: 100%;
-    height: 40%;
+    height: 100%;
     object-fit: contain;
 }
