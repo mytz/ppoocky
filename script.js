@@ -7,16 +7,16 @@ const originalChuckySrc = 'https://i.ibb.co/hDJfXfN/chucky1.png';
 // Guardar la ruta de la imagen de Chucky en hover
 const hoverChuckySrc = 'https://i.ibb.co/S7GyCYB/chucky2.png';
 
-// Crear un objeto de audio
-const terrorSound = new Audio('terror2.wav');
+// Crear un objeto de audio para el sonido de hover
+const hoverSoundChucky = new Audio('terror.wav');
 
 // Añadir un evento de hover a la imagen de Chucky
 chuckyImage.addEventListener('mouseenter', function () {
     // Cambiar la fuente de la imagen a la versión en hover
     chuckyImage.src = hoverChuckySrc;
 
-    // Reproducir el sonido
-    terrorSound.play();
+    // Reproducir el sonido de hover
+    hoverSoundChucky.play();
 });
 
 // Añadir un evento cuando se retira el mouse de la imagen de Chucky
@@ -56,13 +56,16 @@ const dehmiImage = document.querySelector('.dehmi');
 // Guardar la ruta de la imagen DEHMI en hover
 const hoverDehmiSrc = 'https://i.ibb.co/Rhgv0fg/DEHMI2.png';
 
+// Crear un objeto de audio para el sonido de hover
+const hoverSoundDehmi = new Audio('hover.wav');
+
 // Añadir un evento de hover a la imagen DEHMI
 dehmiImage.addEventListener('mouseenter', function () {
     // Cambiar la fuente de la imagen a la versión en hover
     dehmiImage.src = hoverDehmiSrc;
 
     // Reproducir el sonido de hover
-    hoverSound.play();
+    hoverSoundDehmi.play();
 });
 
 // Añadir un evento cuando se retira el mouse de la imagen DEHMI
@@ -84,7 +87,7 @@ sinbiImage.addEventListener('mouseenter', function () {
     sinbiImage.src = hoverSinbiSrc;
 
     // Reproducir el sonido de hover
-    hoverSound.play();
+    hoverSoundDehmi.play();
 });
 
 // Añadir un evento cuando se retira el mouse de la imagen SINBI
@@ -105,7 +108,7 @@ mytImage.addEventListener('mouseenter', function () {
     mytImage.src = hoverMytSrc;
 
     // Reproducir el sonido de hover
-    hoverSound.play();
+    hoverSoundDehmi.play();
 });
 
 // Añadir un evento cuando se retira el mouse de la imagen MYT
