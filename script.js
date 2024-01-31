@@ -2,7 +2,7 @@
 const chuckyImage = document.querySelector('.chucky');
 const originalChuckySrc = 'https://i.ibb.co/hDJfXfN/chucky1.png';
 const hoverChuckySrc = 'https://i.ibb.co/S7GyCYB/chucky2.png';
-const terrorSoundChucky = new Audio('terror.wav');
+const terrorSoundChucky = new Audio('terror2.wav');
 let chuckyMouseOver = false;
 
 chuckyImage.addEventListener('mouseenter', function () {
