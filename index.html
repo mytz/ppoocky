@@ -60,6 +60,28 @@
     // Añadimos un evento para ocultar el mute al hacer clic en cualquier parte de la pantalla
     document.addEventListener('click', ocultarMute);
 </script>
+
+
+<!-- Añadimos el reproductor de música -->
+<div class="radio">
+    <audio id="reproductor">
+        <source src="c1.mp3" type="audio/mp3">
+        <source src="c2.mp3" type="audio/mp3">
+        <source src="c3.mp3" type="audio/mp3">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+
+    <div id="controles">
+        <button onclick="cancionAnterior()">Anterior</button>
+        <button onclick="playPause()">Play/Pause</button>
+        <button onclick="cancionSiguiente()">Siguiente</button>
+    </div>
+</div>
+
+
+<!-- Listo -->
+
+
 </body>
 
 </html>
