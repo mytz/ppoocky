@@ -64,19 +64,13 @@
 
 
 <!-- Añadimos el reproductor de música -->
-<div class="radio">
-    <audio id="reproductor">
-        <source src="c1.mp3" type="audio/mp3">
-        <source src="c2.mp3" type="audio/mp3">
-        <source src="c3.mp3" type="audio/mp3">
-        Tu navegador no soporta el elemento de audio.
-    </audio>
-
-    <div id="controles">
-        <button onclick="cancionAnterior()">Anterior</button>
-        <button onclick="playPause()">Play/Pause</button>
-        <button onclick="cancionSiguiente()">Siguiente</button>
-    </div>
+<div id="reproductormusica" class="reproductor">
+    <i id="play" class="fas fa-play"></i>
+    <i id="backward" class="fas fa-backward"></i>
+    <i id="forward" class="fas fa-forward"></i>
+    <i id="repeat" class="fas fa-repeat"></i>
+    <i id="volumeDown" class="fas fa-volume-low"></i>
+    <i id="volumeUp" class="fas fa-volume-high"></i>
 </div>
 
 
