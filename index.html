@@ -34,15 +34,21 @@
         <div class="amigos-container">
             <img class="amigos" src="https://i.ibb.co/7kSL0vS/AMIGOS.png" alt="Amigos">
         </div>
-        <div class="dehmi-container">
-            <a href="https://xat.me/1475973270"><img class="dehmi" src="https://i.ibb.co/ZHFhTQs/DEHMI1.png" alt="DEHMI">
-        </div>
-        <div class="sinbi-container">
-            <a href="https://xat.me/428697457"><img class="sinbi" src="https://i.ibb.co/qpYK2bd/SINBI1.png" alt="SINBI">
-        </div>
-        <div class="myt-container">
-             <a href="https://xat.me/942659922"><img class="myt" src="https://i.ibb.co/mtFXDqX/MYT1-copia.png" alt="MYT">
-        </div>
+<div class="dehmi-container">
+    <a href="https://xat.me/1475973270">
+        <img class="dehmi" src="https://i.ibb.co/ZHFhTQs/DEHMI1.png" alt="DEHMI">
+    </a>
+</div>
+<div class="sinbi-container">
+    <a href="https://xat.me/428697457">
+        <img class="sinbi" src="https://i.ibb.co/qpYK2bd/SINBI1.png" alt="SINBI">
+    </a>
+</div>
+<div class="myt-container">
+    <a href="https://xat.me/942659922">
+        <img class="myt" src="https://i.ibb.co/mtFXDqX/MYT1-copia.png" alt="MYT">
+    </a>
+</div>
     </div>
 
     <script src="script.js"></script>
@@ -51,14 +57,16 @@
 <img src="muted.png" alt="mute" class="mute" onclick="ocultarMute()">
 
 <script>
-    function ocultarMute() {
+    function ocultarMute(event) {
         var muteButton = document.querySelector('.mute');
-        muteButton.style.display = 'none';
         
-        document.removeEventListener('click', ocultarMute);
+        // Verificar si el clic proviene del botón "mute" o del reproductor de música
+        if (!muteButton.contains(event.target) && event.target.id !== 'music-player') {
+            muteButton.style.display = 'none';
+            document.removeEventListener('click', ocultarMute);
+        }
     }
 
-   
     document.addEventListener('click', ocultarMute);
 </script>
 
