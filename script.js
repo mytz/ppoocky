@@ -111,6 +111,25 @@ mytImage.addEventListener('mouseleave', function () {
     hoverSoundMyt.currentTime = 0;
 });
 
+/////////////////////////////////////////////////////////////////// DARK AMBIENCE
+
+// Obtener la referencia al elemento de audio
+const darkAmbienceSound = new Audio('darkambience.wav');
+
+// Función para reiniciar la reproducción cuando la pista termine
+function restartDarkAmbience() {
+    darkAmbienceSound.currentTime = 0;
+    darkAmbienceSound.play();
+}
+
+// Añadir un evento para reiniciar cuando la pista termine
+darkAmbienceSound.addEventListener('ended', restartDarkAmbience);
+
+// Iniciar la reproducción
+darkAmbienceSound.play();
+
+
 /////////////////////////////////////////////////////////////////// REPRODUCTOR
+
 
 
