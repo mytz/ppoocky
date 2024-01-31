@@ -111,3 +111,33 @@ mytImage.addEventListener('mouseleave', function () {
     hoverSoundMyt.currentTime = 0;
 });
 
+/////////////////////////////////////////////////////////////////// REPRODUCTOR
+
+const reproductor = document.getElementById('reproductor');
+const canciones = ['c1.mp3', 'c2.mp3', 'c3.mp3'];
+let cancionActual = 0;
+
+function playPause() {
+    if (reproductor.paused) {
+        reproductor.play();
+    } else {
+        reproductor.pause();
+    }
+}
+
+function cancionAnterior() {
+    cancionActual = (cancionActual - 1 + canciones.length) % canciones.length;
+    cambiarCancion();
+}
+
+function cancionSiguiente() {
+    cancionActual = (cancionActual + 1) % canciones.length;
+    cambiarCancion();
+}
+
+function cambiarCancion() {
+    reproductor.src = canciones[cancionActual];
+    reproductor.play();
+}
+
+// También puedes añadir lógica para controlar el evento de finalización de la canción, si es necesario.
