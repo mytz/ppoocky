@@ -31,9 +31,6 @@ function parpadeoRapido() {
     // Establecer la visibilidad según el número aleatorio
     luzImage.style.opacity = aleatorio > 0.5 ? 1 : 0;
 
-    // Configurar el próximo parpadeo después de un intervalo aleatorio corto
-    const intervaloAleatorio = Math.floor(Math.random() * (200 - 100 + 1) + 100); // Intervalo entre 100 y 200 milisegundos
-
     // Si la imagen es visible, activar el sonido
     if (luzImage.style.opacity === '1' && !sonidoActivo) {
         sonidoActivo = true;
@@ -41,29 +38,21 @@ function parpadeoRapido() {
         parpadeoSound.play();
     }
 
-    setTimeout(function () {
-        // La imagen se ha vuelto invisible, detener el sonido
-        if (sonidoActivo) {
-            parpadeoSound.pause();
-            parpadeoSound.currentTime = 0;
-            sonidoActivo = false;
-        }
-        parpadeoRapido();
-    }, intervaloAleatorio);
-}
-
-// Configurar evento de transición para detectar cuando la imagen se vuelve visible
-luzImage.addEventListener('transitionend', function () {
-    if (luzImage.style.opacity === '1' && !sonidoActivo) {
-        // La imagen se ha vuelto visible, activar el sonido
-        sonidoActivo = true;
+    // Si la imagen es invisible, detener el sonido
+    if (luzImage.style.opacity === '0' && sonidoActivo) {
+        sonidoActivo = false;
+        parpadeoSound.pause();
         parpadeoSound.currentTime = 0;
-        parpadeoSound.play();
     }
-});
+
+    // Configurar el próximo parpadeo después de un intervalo aleatorio
+    const intervaloAleatorio = Math.floor(Math.random() * (200 - 100 + 1) + 100);
+    setTimeout(() => requestAnimationFrame(parpadeoRapido), intervaloAleatorio);
+}
 
 // Iniciar el parpadeo rápido
 parpadeoRapido();
+
 
 
 // Obtener la referencia a la imagen DEHMI
