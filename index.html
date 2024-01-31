@@ -45,6 +45,40 @@
     </div>
 
     <script src="script.js"></script>
+
+<!-- Añadimos el botón mute -->
+    <img src="muted.png" alt="mute" class="mute" onclick="ocultarMute()">
+
+    <audio id="sonido" preload="auto">
+        <source src="swish1.mp3" type="audio/mp3">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+
+    <script>
+        function playSoundAndChangeImage(soundFileName, newImageSrc) {
+            var audio = document.getElementById('sonido');
+            audio.src = soundFileName;
+            audio.play();
+
+            var image = document.querySelector('.boton1 img');
+            image.src = newImageSrc;
+        }
+
+        function resetImage(originalImageSrc) {
+            var image = document.querySelector('.boton1 img');
+            image.src = originalImageSrc;
+        }
+
+        function ocultarMute() {
+            var muteButton = document.querySelector('.mute');
+            muteButton.style.display = 'none';
+            // También puedes añadir lógica para evitar que vuelva a aparecer.
+            document.removeEventListener('click', ocultarMute);
+        }
+
+        // Añadimos un evento para ocultar el mute al hacer clic en cualquier parte de la pantalla
+        document.addEventListener('click', ocultarMute);
+    </script>
 </body>
 
 </html>
