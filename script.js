@@ -113,29 +113,70 @@ mytImage.addEventListener('mouseleave', function () {
 
 /////////////////////////////////////////////////////////////////// REPRODUCTOR
 
-const reproductor = document.getElementById('reproductor');
-const canciones = ['c1.mp3', 'c2.mp3', 'c3.mp3'];
-let cancionActual = 0;
+document.addEventListener('DOMContentLoaded', function () {
+    const audio = new Audio('c1.mp3'); // Ruta de la primera canción
+    let isPlaying = false;
+    let isRepeat = false;
 
-function playPause() {
-    if (reproductor.paused) {
-        reproductor.play();
-    } else {
-        reproductor.pause();
+    const playButton = document.getElementById('play');
+    const backwardButton = document.getElementById('backward');
+    const forwardButton = document.getElementById('forward');
+    const repeatButton = document.getElementById('repeat');
+    const volumeDownButton = document.getElementById('volumeDown');
+    const volumeUpButton = document.getElementById('volumeUp');
+
+    playButton.addEventListener('click', function () {
+        if (isPlaying) {
+            audio.pause();
+        } else {
+            audio.play();
+        }
+        isPlaying = !isPlaying;
+    });
+
+    backwardButton.addEventListener('click', function () {
+        // Cambiar a la canción anterior
+        cambiarCancion('c2.mp3'); // Ruta de la segunda canción
+    });
+
+    forwardButton.addEventListener('click', function () {
+        // Cambiar a la siguiente canción
+        cambiarCancion('c3.mp3'); // Ruta de la tercera canción
+    });
+
+    repeatButton.addEventListener('click', function () {
+        isRepeat = !isRepeat;
+        // Lógica para repetir la canción actual
+        // Puedes cambiar la lógica según tu implementación real
+    });
+
+    volumeDownButton.addEventListener('click', function () {
+        ajustarVolumen('down');
+    });
+
+    volumeUpButton.addEventListener('click', function () {
+        ajustarVolumen('up');
+    });
+
+    // Función para cambiar la canción
+    function cambiarCancion(ruta) {
+        audio.src = ruta;
+        audio.play();
+        isPlaying = true;
     }
-}
 
-function cancionAnterior() {
-    cancionActual = (cancionActual - 1 + canciones.length) % canciones.length;
-    cambiarCancion();
-}
+    // Función para ajustar el volumen
+    function ajustarVolumen(direccion) {
+        const volumenActual = audio.volume;
 
-function cancionSiguiente() {
-    cancionActual = (cancionActual + 1) % canciones.length;
-    cambiarCancion();
-}
-
-function cambiarCancion() {
-    reproductor.src = canciones[cancionActual];
-    reproductor.play();
-}
+        if (direccion === 'up') {
+            if (volumenActual < 1) {
+                audio.volume = Math.min(volumenActual + 0.1, 1);
+            }
+        } else if (direccion === 'down') {
+            if (volumenActual > 0) {
+                audio.volume = Math.max(volumenActual - 0.1, 0);
+            }
+        }
+    }
+});
