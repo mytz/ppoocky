@@ -122,12 +122,15 @@ document.addEventListener('DOMContentLoaded', function() {
     musicPlayerButton.addEventListener('click', function() {
         if (audio.paused) {
             audio.src = 'icecube.mp3'; // Cambia la fuente del audio
-            audio.volume = audio.volume - 0.15; // Reducir el volumen en 15db
+            audio.volume = Math.max(0, audio.volume - 0.301); // Reducir el volumen en 30db
             audio.play();
         } else {
             audio.pause();
         }
     });
+});
+
+
 });
 
 
