@@ -24,24 +24,7 @@ const luzImage = document.querySelector('.luz');
 const parpadeoSound = new Audio('parpadeo.wav');
 let sonidoActivo = false;
 
-// Configurar evento de transición para detectar cuando la imagen se vuelve visible
-luzImage.addEventListener('transitionend', function () {
-    if (luzImage.style.opacity === '1' && sonidoActivo) {
-        // La imagen se ha vuelto visible, reproducir el sonido
-        parpadeoSound.currentTime = 0;
-        parpadeoSound.play();
-    } else {
-        // La imagen se ha vuelto invisible, detener el sonido
-        parpadeoSound.pause();
-        parpadeoSound.currentTime = 0;
-    }
-});
-
 function parpadeoRapido() {
-    sonidoActivo = true;
-    // Reproducir el sonido de parpadeo
-    parpadeoSound.play();
-
     // Generar un número aleatorio entre 0 y 1
     const aleatorio = Math.random();
 
@@ -50,14 +33,34 @@ function parpadeoRapido() {
 
     // Configurar el próximo parpadeo después de un intervalo aleatorio corto
     const intervaloAleatorio = Math.floor(Math.random() * (200 - 100 + 1) + 100); // Intervalo entre 100 y 200 milisegundos
+
+    // Si la imagen es visible, activar el sonido
+    if (luzImage.style.opacity === '1' && !sonidoActivo) {
+        sonidoActivo = true;
+        parpadeoSound.currentTime = 0;
+        parpadeoSound.play();
+    }
+
     setTimeout(function () {
         // La imagen se ha vuelto invisible, detener el sonido
-        parpadeoSound.pause();
-        parpadeoSound.currentTime = 0;
-        sonidoActivo = false;
+        if (sonidoActivo) {
+            parpadeoSound.pause();
+            parpadeoSound.currentTime = 0;
+            sonidoActivo = false;
+        }
         parpadeoRapido();
     }, intervaloAleatorio);
 }
+
+// Configurar evento de transición para detectar cuando la imagen se vuelve visible
+luzImage.addEventListener('transitionend', function () {
+    if (luzImage.style.opacity === '1' && !sonidoActivo) {
+        // La imagen se ha vuelto visible, activar el sonido
+        sonidoActivo = true;
+        parpadeoSound.currentTime = 0;
+        parpadeoSound.play();
+    }
+});
 
 // Iniciar el parpadeo rápido
 parpadeoRapido();
