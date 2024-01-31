@@ -219,7 +219,7 @@ body {
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border: 1px solid white; /* Trazado blanco fino alrededor del reproductor */
+    border: 1px solid #535353; /* Trazado blanco fino alrededor del reproductor */
 }
 
 .playerbutton {
@@ -231,12 +231,12 @@ body {
 }
 
 #music-player i.fa-play {
-    color: white; /* Color blanco para el ícono de reproducción */
+    color: #535353; /* Color blanco para el ícono de reproducción */
     transition: color 0.3s; /* Efecto de transición en el cambio de color al pasar el ratón */
 }
 
 #music-player:hover i.fa-play {
-    color: #e4bc70; /* Color al pasar el ratón por encima */
+    color: white; /* Color al pasar el ratón por encima */
 }
 
 #music-player audio {
