@@ -18,18 +18,27 @@ chuckyImage.addEventListener('mouseleave', function () {
     terrorSoundChucky.currentTime = 0;
 });
 
+// LUZ PAPARDEANDO
+
 const luzImage = document.querySelector('.luz');
 const parpadeoSound = new Audio('parpadeo.wav');
 let luzMouseOver = false;
 
 function parpadeoRapido() {
+    // Reproducir el sonido de parpadeo al inicio de cada parpadeo
+    parpadeoSound.currentTime = 0;
     parpadeoSound.play();
+
     const aleatorio = Math.random();
     luzImage.style.opacity = aleatorio > 0.5 ? 1 : 0;
+
     const intervaloAleatorio = Math.floor(Math.random() * (200 - 100 + 1) + 100);
     setTimeout(() => {
         if (luzMouseOver) {
             parpadeoRapido();
+        } else {
+            // Pausar el sonido cuando el mouse no está sobre la imagen
+            parpadeoSound.pause();
         }
     }, intervaloAleatorio);
 }
@@ -42,6 +51,7 @@ luzImage.addEventListener('mouseenter', function () {
 luzImage.addEventListener('mouseleave', function () {
     luzMouseOver = false;
 });
+
 
 // Obtener la referencia a la imagen DEHMI
 const dehmiImage = document.querySelector('.dehmi');
