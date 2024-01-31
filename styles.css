@@ -151,7 +151,7 @@ body {
 }
 .dehmi-container {
     position: absolute;
-    top: 54vh; /* Ajusta la posición vertical según tus preferencias */
+    top: 52vh; /* Ajusta la posición vertical según tus preferencias */
     left: 3vw; /* Ajusta la posición horizontal según tus preferencias */
     width: 5vw; /* Ajusta el ancho según tus preferencias */
     height: 20vh; /* Esto hará que el tamaño se ajuste proporcionalmente */
@@ -165,7 +165,7 @@ body {
 
 .sinbi-container {
     position: absolute;
-    top: 59vh; /* Ajusta la posición vertical según tus preferencias */
+    top: 57vh; /* Ajusta la posición vertical según tus preferencias */
     left: 3vw; /* Ajusta la posición horizontal según tus preferencias */
     width: 5vw; /* Ajusta el ancho según tus preferencias */
     height: 20vh; /* Esto hará que el tamaño se ajuste proporcionalmente */
@@ -179,7 +179,7 @@ body {
 
 .myt-container {
     position: absolute;
-    top: 64vh; /* Ajusta la posición vertical según tus preferencias */
+    top: 62vh; /* Ajusta la posición vertical según tus preferencias */
     left: 3vw; /* Ajusta la posición horizontal según tus preferencias */
     width: 5vw; /* Ajusta el ancho según tus preferencias */
     height: 20vh; /* Esto hará que el tamaño se ajuste proporcionalmente */
