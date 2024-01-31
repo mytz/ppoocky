@@ -64,14 +64,14 @@ body {
 .chucky-container {
     position: absolute;
     top: 23vh;
-    left: -15vw;
+    left: 5.3vw;
     width: 83vw;
     height: 83vh;
     z-index: -1; /* CHUCKY está detrás de LUZ */
 }
 
 .chucky {
-    width: 100%;
+    width: 50%;
     height: 100%;
     object-fit: contain;
     position: absolute;
