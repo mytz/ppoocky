@@ -33,6 +33,7 @@ luzImage.addEventListener('transitionend', function () {
     } else {
         // La imagen se ha vuelto invisible, detener el sonido
         parpadeoSound.pause();
+        parpadeoSound.currentTime = 0;
     }
 });
 
@@ -52,6 +53,8 @@ function parpadeoRapido() {
     setTimeout(function () {
         // La imagen se ha vuelto invisible, detener el sonido
         parpadeoSound.pause();
+        parpadeoSound.currentTime = 0;
+        sonidoActivo = false;
         parpadeoRapido();
     }, intervaloAleatorio);
 }
