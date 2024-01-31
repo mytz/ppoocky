@@ -208,3 +208,32 @@ body {
 
 /* el reproductor PROXIMAMENTE*/
 
+#music-player {
+    position: fixed;
+    top: 10px; /* Ajusta la posición vertical según tus necesidades */
+    right: 10px; /* Ajusta la posición horizontal según tus necesidades */
+    display: flex;
+    align-items: center;
+    background-color: #fff; /* Color de fondo del reproductor */
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra del reproductor */
+}
+
+.playerbutton {
+    width: 27px;
+    height: 27px;
+    overflow: hidden;
+    margin-right: 10px; /* Espacio entre el botón y el nombre de la canción */
+    cursor: pointer;
+}
+
+#music-player i.fa-play {
+    /* Agrega estilos adicionales según sea necesario para el ícono de reproducción */
+}
+
+#music-player audio {
+    display: none; /* El reproductor estará oculto inicialmente */
+}
+
+/* Estilos adicionales según sea necesario */
