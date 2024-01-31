@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', function() {
         musicPlayerButton.style.display = 'none';
         pauseButton.style.display = 'block';
 
-        audio.src = 'icecube.mp3';
+        audio.src = 'icecube2.mp3';
         audio.volume = Math.max(0, audio.volume - 0.301);
         audio.play();
     });
