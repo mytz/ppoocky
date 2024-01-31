@@ -1,119 +1,73 @@
 // Obtener la referencia a la imagen de Chucky
 const chuckyImage = document.querySelector('.chucky');
+const chuckySound = new Audio('terror.wav');
 
-// Guardar la ruta original de la imagen de Chucky
-const originalChuckySrc = 'https://i.ibb.co/hDJfXfN/chucky1.png';
-
-// Guardar la ruta de la imagen de Chucky en hover
-const hoverChuckySrc = 'https://i.ibb.co/S7GyCYB/chucky2.png';
-
-// Crear un objeto de audio
-const terrorSound = new Audio('terror.wav');
-
-// Añadir un evento de hover a la imagen de Chucky
-chuckyImage.addEventListener('mouseover', function () {
-    // Cambiar la fuente de la imagen a la versión en hover
-    chuckyImage.src = hoverChuckySrc;
-
-    // Reproducir el sonido
-    terrorSound.play();
+chuckyImage.addEventListener('mouseenter', function () {
+    chuckyImage.src = 'https://i.ibb.co/S7GyCYB/chucky2.png';
+    chuckySound.play();
 });
 
-// Añadir un evento cuando se retira el mouse de la imagen de Chucky
-chuckyImage.addEventListener('mouseout', function () {
-    // Volver a la fuente original de la imagen
-    chuckyImage.src = originalChuckySrc;
+chuckyImage.addEventListener('mouseleave', function () {
+    chuckyImage.src = 'https://i.ibb.co/hDJfXfN/chucky1.png';
+    chuckySound.pause();
+    chuckySound.currentTime = 0;
 });
 
 // Obtener la referencia a la imagen de LUZ
 const luzImage = document.querySelector('.luz');
+const luzSound = new Audio('parpadeo.wav');
 
-// Crear un objeto de audio para el sonido de parpadeo
-const parpadeoSound = new Audio('parpadeo.wav');
+luzImage.addEventListener('mouseenter', function () {
+    luzSound.play();
+});
 
-// Función para cambiar la visibilidad de la imagen de LUZ de manera aleatoria y rápida
-function parpadeoRapido() {
-    // Reproducir el sonido de parpadeo
-    parpadeoSound.play();
+luzImage.addEventListener('mouseleave', function () {
+    luzSound.pause();
+    luzSound.currentTime = 0;
+});
 
-    // Generar un número aleatorio entre 0 y 1
-    const aleatorio = Math.random();
-
-    // Establecer la visibilidad según el número aleatorio
-    luzImage.style.opacity = aleatorio > 0.5 ? 1 : 0;
-
-    // Configurar el próximo parpadeo después de un intervalo aleatorio corto
-    const intervaloAleatorio = Math.floor(Math.random() * (200 - 100 + 1) + 100); // Intervalo entre 100 y 200 milisegundos
-    setTimeout(parpadeoRapido, intervaloAleatorio);
-}
-
-// Iniciar el parpadeo rápido
-parpadeoRapido();
-///////////////////////////////////////BOTONES
-
+// Repetir el mismo proceso para DEHMI, SINBI y MYT
 // Obtener la referencia a la imagen DEHMI
 const dehmiImage = document.querySelector('.dehmi');
+const dehmiSound = new Audio('hover.wav');
 
-// Guardar la ruta de la imagen DEHMI en hover
-const hoverDehmiSrc = 'https://i.ibb.co/Rhgv0fg/DEHMI2.png';
-
-// Crear un objeto de audio para el sonido de hover
-const hoverSound = new Audio('hover.wav');
-
-// Añadir un evento de hover a la imagen DEHMI
-dehmiImage.addEventListener('mouseover', function () {
-    // Cambiar la fuente de la imagen a la versión en hover
-    dehmiImage.src = hoverDehmiSrc;
-
-    // Reproducir el sonido de hover
-    hoverSound.play();
+dehmiImage.addEventListener('mouseenter', function () {
+    dehmiImage.src = 'https://i.ibb.co/Rhgv0fg/DEHMI2.png';
+    dehmiSound.play();
 });
 
-// Añadir un evento cuando se retira el mouse de la imagen DEHMI
-dehmiImage.addEventListener('mouseout', function () {
-    // Volver a la fuente original de la imagen
+dehmiImage.addEventListener('mouseleave', function () {
     dehmiImage.src = 'https://i.ibb.co/ZHFhTQs/DEHMI1.png';
+    dehmiSound.pause();
+    dehmiSound.currentTime = 0;
 });
 
-// Repetir el mismo proceso para SINBI y MYT
 // Obtener la referencia a la imagen SINBI
 const sinbiImage = document.querySelector('.sinbi');
+const sinbiSound = new Audio('hover.wav');
 
-// Guardar la ruta de la imagen SINBI en hover
-const hoverSinbiSrc = 'https://i.ibb.co/X7MgtMJ/SINBI2.png';
-
-// Añadir un evento de hover a la imagen SINBI
-sinbiImage.addEventListener('mouseover', function () {
-    // Cambiar la fuente de la imagen a la versión en hover
-    sinbiImage.src = hoverSinbiSrc;
-
-    // Reproducir el sonido de hover
-    hoverSound.play();
+sinbiImage.addEventListener('mouseenter', function () {
+    sinbiImage.src = 'https://i.ibb.co/X7MgtMJ/SINBI2.png';
+    sinbiSound.play();
 });
 
-// Añadir un evento cuando se retira el mouse de la imagen SINBI
-sinbiImage.addEventListener('mouseout', function () {
-    // Volver a la fuente original de la imagen
+sinbiImage.addEventListener('mouseleave', function () {
     sinbiImage.src = 'https://i.ibb.co/qpYK2bd/SINBI1.png';
+    sinbiSound.pause();
+    sinbiSound.currentTime = 0;
 });
 
 // Obtener la referencia a la imagen MYT
 const mytImage = document.querySelector('.myt');
+const mytSound = new Audio('hover.wav');
 
-// Guardar la ruta de la imagen MYT en hover
-const hoverMytSrc = 'https://i.ibb.co/DwFqq4d/MYT2.png';
-
-// Añadir un evento de hover a la imagen MYT
-mytImage.addEventListener('mouseover', function () {
-    // Cambiar la fuente de la imagen a la versión en hover
-    mytImage.src = hoverMytSrc;
-
-    // Reproducir el sonido de hover
-    hoverSound.play();
+mytImage.addEventListener('mouseenter', function () {
+    mytImage.src = 'https://i.ibb.co/DwFqq4d/MYT2.png';
+    mytSound.play();
 });
 
-// Añadir un evento cuando se retira el mouse de la imagen MYT
-mytImage.addEventListener('mouseout', function () {
-    // Volver a la fuente original de la imagen
+mytImage.addEventListener('mouseleave', function () {
     mytImage.src = 'https://i.ibb.co/mtFXDqX/MYT1-copia.png';
+    mytSound.pause();
+    mytSound.currentTime = 0;
 });
