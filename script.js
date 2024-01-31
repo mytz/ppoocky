@@ -36,27 +36,28 @@ luzImage.addEventListener('transitionend', function () {
     }
 });
 
-function iniciarParpadeo() {
+function parpadeoRapido() {
     sonidoActivo = true;
-    luzImage.style.opacity = 1;
+    // Reproducir el sonido de parpadeo
+    parpadeoSound.play();
+
+    // Generar un número aleatorio entre 0 y 1
+    const aleatorio = Math.random();
+
+    // Establecer la visibilidad según el número aleatorio
+    luzImage.style.opacity = aleatorio > 0.5 ? 1 : 0;
+
+    // Configurar el próximo parpadeo después de un intervalo aleatorio corto
+    const intervaloAleatorio = Math.floor(Math.random() * (200 - 100 + 1) + 100); // Intervalo entre 100 y 200 milisegundos
+    setTimeout(function () {
+        // La imagen se ha vuelto invisible, detener el sonido
+        parpadeoSound.pause();
+        parpadeoRapido();
+    }, intervaloAleatorio);
 }
 
-function detenerParpadeo() {
-    sonidoActivo = false;
-    luzImage.style.opacity = 0;
-    parpadeoSound.pause();
-}
-
-// Iniciar el parpadeo automático
-setInterval(iniciarParpadeo, obtenerIntervaloAleatorio());
-
-// Detener el parpadeo después de cierto tiempo (ajusta el valor de 8000 según tus necesidades)
-setTimeout(detenerParpadeo, 8000); // Detener después de 8 segundos, ajusta según tus necesidades
-
-function obtenerIntervaloAleatorio() {
-    return Math.floor(Math.random() * (200 - 100 + 1) + 100);
-}
-
+// Iniciar el parpadeo rápido
+parpadeoRapido();
 
 
 // Obtener la referencia a la imagen DEHMI
