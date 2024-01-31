@@ -131,5 +131,16 @@ darkAmbienceSound.play();
 
 /////////////////////////////////////////////////////////////////// REPRODUCTOR
 
+$(document).ready(function(){
+    // Manejar la reproducción/pausa al hacer clic en el botón
+    $('#music-player .playerbutton').on('click', function() {
+        var audio = $('#music-player audio')[0];
+        if (audio.paused) {
+            audio.play();
+        } else {
+            audio.pause();
+        }
+    });
+});
 
 
