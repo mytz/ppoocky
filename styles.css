@@ -233,18 +233,23 @@ body {
     cursor: pointer;
 }
 
-#music-player i.fa-play, #music-player i.fa-pause {
+.playerbutton i.fa-play, .pausebutton i.fa-pause {
     color: #535353;
     transition: color 0.3s;
 }
 
-#music-player:hover i.fa-play, #music-player:hover i.fa-pause {
+#music-player:hover .playerbutton i.fa-play, #music-player:hover .pausebutton i.fa-pause {
     color: #3b272e;
+}
+
+#music-player .pausebutton {
+    display: none;
 }
 
 #music-player audio {
     display: none;
     color: white;
 }
+
 
 /* Estilos adicionales según sea necesario */
