@@ -209,24 +209,28 @@ body {
 /* el reproductor PROXIMAMENTE*/
 
 #music-player {
-    position: fixed;
+position: fixed;
     top: 10px;
     right: 10px;
     display: flex;
     align-items: center;
     background-color: #000;
-    opacity: 80%;
+    opacity: 50%;
     padding: 10px;
+    color: #535353;
+    font-size: 0.8vw;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border: 1px solid #535353; /* Trazado blanco fino alrededor del reproductor */
 }
 
 .playerbutton {
-    width: 18px;
-    height: 21px;
+    position: fixed;
+    top: 2.3vh;
+    right: 5vw;
+    width: 1vw;
+    height: 1vw;
     overflow: hidden;
-    margin-right: 10px;
+    margin-right: 1px;
     cursor: pointer;
 }
 
@@ -236,7 +240,7 @@ body {
 }
 
 #music-player:hover i.fa-play {
-    color: white; /* Color al pasar el ratón por encima */
+    color: #3b272e; /* Color al pasar el ratón por encima */
 }
 
 #music-player audio {
