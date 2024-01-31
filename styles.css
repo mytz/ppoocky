@@ -214,15 +214,16 @@ body {
     right: 10px; /* Ajusta la posición horizontal según tus necesidades */
     display: flex;
     align-items: center;
-    background-color: #fff; /* Color de fondo del reproductor */
+    background-color: #000; /* Color de fondo del reproductor */
+    opacity: 80%;
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra del reproductor */
 }
 
 .playerbutton {
-    width: 27px;
-    height: 27px;
+    width: 18px;
+    height: 21px;
     overflow: hidden;
     margin-right: 10px; /* Espacio entre el botón y el nombre de la canción */
     cursor: pointer;
