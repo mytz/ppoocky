@@ -149,3 +149,44 @@ body {
     height: 20%;
     object-fit: contain;
 }
+.dehmi-container {
+    position: absolute;
+    top: 54vh; /* Ajusta la posición vertical según tus preferencias */
+    left: 3vw; /* Ajusta la posición horizontal según tus preferencias */
+    width: 5vw; /* Ajusta el ancho según tus preferencias */
+    height: 8vh; /* Esto hará que el tamaño se ajuste proporcionalmente */
+}
+
+.dehmi {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.sinbi-container {
+    position: absolute;
+    top: 61vh; /* Ajusta la posición vertical según tus preferencias */
+    left: 3vw; /* Ajusta la posición horizontal según tus preferencias */
+    width: 5vw; /* Ajusta el ancho según tus preferencias */
+    height: 8vh; /* Esto hará que el tamaño se ajuste proporcionalmente */
+}
+
+.sinbi {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.myt-container {
+    position: absolute;
+    top: 68vh; /* Ajusta la posición vertical según tus preferencias */
+    left: 3vw; /* Ajusta la posición horizontal según tus preferencias */
+    width: 5vw; /* Ajusta el ancho según tus preferencias */
+    height: 8vh; /* Esto hará que el tamaño se ajuste proporcionalmente */
+}
+
+.myt {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
