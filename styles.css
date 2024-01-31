@@ -206,24 +206,23 @@ body {
 }
 
 
-/* el reproductor PROXIMAMENTE*/
+/* el reproductor*/
 
 #music-player {
-position: fixed;
+    position: fixed;
     top: 2.1vh;
     right: 2.5vh;
     display: flex;
     align-items: center;
     background-color: #000;
     opacity: 50%;
-    /* padding: 0vh; */
     color: #535353;
     font-size: 0.8vw;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.playerbutton {
+.playerbutton, .pausebutton {
     position: fixed;
     top: 2.3vh;
     right: 5vw;
@@ -234,18 +233,18 @@ position: fixed;
     cursor: pointer;
 }
 
-#music-player i.fa-play {
-    color: #535353; /* Color blanco para el ícono de reproducción */
-    transition: color 0.3s; /* Efecto de transición en el cambio de color al pasar el ratón */
+#music-player i.fa-play, #music-player i.fa-pause {
+    color: #535353;
+    transition: color 0.3s;
 }
 
-#music-player:hover i.fa-play {
-    color: #3b272e; /* Color al pasar el ratón por encima */
+#music-player:hover i.fa-play, #music-player:hover i.fa-pause {
+    color: #3b272e;
 }
 
 #music-player audio {
     display: none;
-    color: white; /* Color blanco para el texto dentro del reproductor */
+    color: white;
 }
 
 /* Estilos adicionales según sea necesario */
