@@ -22,35 +22,41 @@ chuckyImage.addEventListener('mouseleave', function () {
 
 const luzImage = document.querySelector('.luz');
 const parpadeoSound = new Audio('parpadeo.wav');
-let luzMouseOver = false;
+let sonidoActivo = false;
 
-function parpadeoRapido() {
-    // Reproducir el sonido de parpadeo al inicio de cada parpadeo
-    parpadeoSound.currentTime = 0;
-    parpadeoSound.play();
+// Configurar evento de transición para detectar cuando la imagen se vuelve visible
+luzImage.addEventListener('transitionend', function () {
+    if (luzImage.style.opacity === '1' && sonidoActivo) {
+        // La imagen se ha vuelto visible, reproducir el sonido
+        parpadeoSound.currentTime = 0;
+        parpadeoSound.play();
+    } else {
+        // La imagen se ha vuelto invisible, detener el sonido
+        parpadeoSound.pause();
+    }
+});
 
-    const aleatorio = Math.random();
-    luzImage.style.opacity = aleatorio > 0.5 ? 1 : 0;
-
-    const intervaloAleatorio = Math.floor(Math.random() * (200 - 100 + 1) + 100);
-    setTimeout(() => {
-        if (luzMouseOver) {
-            parpadeoRapido();
-        } else {
-            // Pausar el sonido cuando el mouse no está sobre la imagen
-            parpadeoSound.pause();
-        }
-    }, intervaloAleatorio);
+function iniciarParpadeo() {
+    sonidoActivo = true;
+    luzImage.style.opacity = 1;
 }
 
-luzImage.addEventListener('mouseenter', function () {
-    luzMouseOver = true;
-    parpadeoRapido();
-});
+function detenerParpadeo() {
+    sonidoActivo = false;
+    luzImage.style.opacity = 0;
+    parpadeoSound.pause();
+}
 
-luzImage.addEventListener('mouseleave', function () {
-    luzMouseOver = false;
-});
+// Iniciar el parpadeo automático
+setInterval(iniciarParpadeo, obtenerIntervaloAleatorio());
+
+// Detener el parpadeo después de cierto tiempo (ajusta el valor de 8000 según tus necesidades)
+setTimeout(detenerParpadeo, 8000); // Detener después de 8 segundos, ajusta según tus necesidades
+
+function obtenerIntervaloAleatorio() {
+    return Math.floor(Math.random() * (200 - 100 + 1) + 100);
+}
+
 
 
 // Obtener la referencia a la imagen DEHMI
