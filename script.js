@@ -120,16 +120,18 @@ document.addEventListener('DOMContentLoaded', function() {
     var audio = document.querySelector('#music-player audio');
 
     musicPlayerButton.addEventListener('click', function() {
-        if (audio.paused) {
-            audio.src = 'icecube.mp3';
-            audio.volume = Math.max(0, audio.volume - 0.301);
-            audio.play();
-        } else {
-            audio.pause();
-        }
+        musicPlayerButton.style.display = 'none';
+        pauseButton.style.display = 'block';
+
+        audio.src = 'icecube.mp3';
+        audio.volume = Math.max(0, audio.volume - 0.301);
+        audio.play();
     });
 
     pauseButton.addEventListener('click', function() {
+        musicPlayerButton.style.display = 'block';
+        pauseButton.style.display = 'none';
+
         audio.pause();
     });
 });
