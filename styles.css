@@ -139,13 +139,13 @@ body {
     top: 50vh; /* Ajusta la posición vertical según tus preferencias */
     left: 4vw; /* Ajusta la posición horizontal según tus preferencias */
     width: 15vw; /* Ajusta el ancho según tus preferencias */
-    height: auto; /* Esto hará que el tamaño se ajuste proporcionalmente */
+    height: 30vh; /* Esto hará que el tamaño se ajuste proporcionalmente */
     pointer-events: none; /* Para que no afecte a los eventos del mouse */
     z-index: 7; /* Ajusta el índice Z según sea necesario */
 }
 
 .amigos {
     width: 20%;
-    height: 100%;
+    height: 20%;
     object-fit: contain;
 }
