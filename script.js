@@ -11,7 +11,7 @@ const hoverChuckySrc = 'https://i.ibb.co/S7GyCYB/chucky2.png';
 const hoverSoundChucky = new Audio('terror.wav');
 
 // Añadir un evento de hover a la imagen de Chucky
-chuckyImage.addEventListener('mouseenter', function () {
+chuckyImage.addEventListener('mouseover', function () {
     // Cambiar la fuente de la imagen a la versión en hover
     chuckyImage.src = hoverChuckySrc;
 
@@ -20,7 +20,7 @@ chuckyImage.addEventListener('mouseenter', function () {
 });
 
 // Añadir un evento cuando se retira el mouse de la imagen de Chucky
-chuckyImage.addEventListener('mouseleave', function () {
+chuckyImage.addEventListener('mouseout', function () {
     // Volver a la fuente original de la imagen
     chuckyImage.src = originalChuckySrc;
 });
@@ -60,7 +60,7 @@ const hoverDehmiSrc = 'https://i.ibb.co/Rhgv0fg/DEHMI2.png';
 const hoverSoundDehmi = new Audio('hover.wav');
 
 // Añadir un evento de hover a la imagen DEHMI
-dehmiImage.addEventListener('mouseenter', function () {
+dehmiImage.addEventListener('mouseover', function () {
     // Cambiar la fuente de la imagen a la versión en hover
     dehmiImage.src = hoverDehmiSrc;
 
@@ -69,7 +69,7 @@ dehmiImage.addEventListener('mouseenter', function () {
 });
 
 // Añadir un evento cuando se retira el mouse de la imagen DEHMI
-dehmiImage.addEventListener('mouseleave', function () {
+dehmiImage.addEventListener('mouseout', function () {
     // Volver a la fuente original de la imagen
     dehmiImage.src = 'https://i.ibb.co/ZHFhTQs/DEHMI1.png';
 });
@@ -82,7 +82,7 @@ const sinbiImage = document.querySelector('.sinbi');
 const hoverSinbiSrc = 'https://i.ibb.co/X7MgtMJ/SINBI2.png';
 
 // Añadir un evento de hover a la imagen SINBI
-sinbiImage.addEventListener('mouseenter', function () {
+sinbiImage.addEventListener('mouseover', function () {
     // Cambiar la fuente de la imagen a la versión en hover
     sinbiImage.src = hoverSinbiSrc;
 
@@ -91,7 +91,7 @@ sinbiImage.addEventListener('mouseenter', function () {
 });
 
 // Añadir un evento cuando se retira el mouse de la imagen SINBI
-sinbiImage.addEventListener('mouseleave', function () {
+sinbiImage.addEventListener('mouseout', function () {
     // Volver a la fuente original de la imagen
     sinbiImage.src = 'https://i.ibb.co/qpYK2bd/SINBI1.png';
 });
@@ -103,7 +103,7 @@ const mytImage = document.querySelector('.myt');
 const hoverMytSrc = 'https://i.ibb.co/DwFqq4d/MYT2.png';
 
 // Añadir un evento de hover a la imagen MYT
-mytImage.addEventListener('mouseenter', function () {
+mytImage.addEventListener('mouseover', function () {
     // Cambiar la fuente de la imagen a la versión en hover
     mytImage.src = hoverMytSrc;
 
@@ -112,7 +112,7 @@ mytImage.addEventListener('mouseenter', function () {
 });
 
 // Añadir un evento cuando se retira el mouse de la imagen MYT
-mytImage.addEventListener('mouseleave', function () {
+mytImage.addEventListener('mouseout', function () {
     // Volver a la fuente original de la imagen
     mytImage.src = 'https://i.ibb.co/mtFXDqX/MYT1-copia.png';
 });
