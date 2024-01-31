@@ -45,9 +45,9 @@ body {
 
 .new-element-container {
     position: absolute;
-    top: 40vh;
-    left: 15vw;
-    width: 25vw;
+    top: 40.3vh;
+    left: 13.8vw;
+    width: 27.5vw;
     height: 100vh;
     pointer-events: none;
     z-index: 5; /* New Element está delante de todos */
@@ -118,7 +118,7 @@ body {
 
 .text-container {
     position: absolute;
-    top: 84.7vh;
+    top: 85.2vh;
     left: -22.5vw;
     width: 100vw;
     height: 10vh;
@@ -129,8 +129,8 @@ body {
 }
 
 .text {
-    font-size: 0.6vw; /* Utiliza vw en lugar de pt */
+    font-size: 0.68vw; /* Utiliza vw en lugar de pt */
     color: #5c5c5c;
     text-align: justify;
-    width: 21%;
+    width: 22.4%;
 }
