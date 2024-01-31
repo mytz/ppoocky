@@ -210,8 +210,8 @@ body {
 
 #music-player {
 position: fixed;
-    top: 2vh;
-    right: 2vh;
+    top: 2.1vh;
+    right: 2.5vh;
     display: flex;
     align-items: center;
     background-color: #000;
