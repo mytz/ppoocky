@@ -54,21 +54,18 @@
     <script src="script.js"></script>
 
 <!-- Añadimos el botón mute -->
-<img src="muted.png" alt="mute" class="mute" onclick="ocultarMute(event)">
+<img src="muted.png" alt="mute" class="mute" onclick="ocultarMute()">
 
 <script>
-    function ocultarMute(event) {
+    function ocultarMute() {
         var muteButton = document.querySelector('.mute');
-
-        // Verificar si el clic proviene del botón "mute" o del reproductor de música
-        if (!muteButton.contains(event.target) && event.target.id !== 'music-player') {
-            muteButton.style.display = 'none';
-            document.removeEventListener('click', ocultarMute);
-        }
+        muteButton.style.display = 'none';
+        document.removeEventListener('click', ocultarMute);
     }
 
     document.addEventListener('click', ocultarMute);
 </script>
+
 
 
 
