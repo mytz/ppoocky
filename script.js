@@ -18,10 +18,10 @@ chuckyImage.addEventListener('mouseleave', function () {
     terrorSoundChucky.currentTime = 0;
 });
 
-// LUZ PAPARDEANDO
+/////// LUZ PAPARDEANDO
 
 const luzImage = document.querySelector('.luz');
-const parpadeoSound = new Audio('parpadeo.wav');
+const parpadeoSound = new Audio('parpadeo2.wav');
 let sonidoActivo = false;
 
 function parpadeoRapido() {
@@ -53,7 +53,7 @@ function parpadeoRapido() {
 // Iniciar el parpadeo rápido
 parpadeoRapido();
 
-
+///////////////////////////////////FIN DEL PARPADEO
 
 // Obtener la referencia a la imagen DEHMI
 const dehmiImage = document.querySelector('.dehmi');
