@@ -125,7 +125,6 @@ document.addEventListener('DOMContentLoaded', function() {
         pauseButton.style.display = 'block';
 
         audio.src = 'icecube3.mp3';
-        audio.volume = Math.max(0, audio.volume - 0.301);
         audio.currentTime = currentTime;
         audio.play();
     });
