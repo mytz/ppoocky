@@ -118,13 +118,15 @@ document.addEventListener('DOMContentLoaded', function() {
     var musicPlayerButton = document.querySelector('#music-player .playerbutton');
     var pauseButton = document.querySelector('#music-player .pausebutton');
     var audio = document.querySelector('#music-player audio');
+    var currentTime = 0;
 
     musicPlayerButton.addEventListener('click', function() {
         musicPlayerButton.style.display = 'none';
         pauseButton.style.display = 'block';
 
-        audio.src = 'icecube2.mp3';
+        audio.src = 'icecube3.mp3';
         audio.volume = Math.max(0, audio.volume - 0.301);
+        audio.currentTime = currentTime;
         audio.play();
     });
 
@@ -132,6 +134,7 @@ document.addEventListener('DOMContentLoaded', function() {
         musicPlayerButton.style.display = 'block';
         pauseButton.style.display = 'none';
 
+        currentTime = audio.currentTime;
         audio.pause();
     });
 });
