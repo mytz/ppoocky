@@ -278,3 +278,9 @@ body {
         justify-content: center;
     }
 }
+
+
+  /* Ocultar el enlace de GitHub */
+  .github-link {
+    display: none !important;
+  }
